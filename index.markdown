@@ -25,65 +25,69 @@ We propose a novel 3D facial animation model that does not require explicit temp
 
 
 
-## LVME
+## Normalized Vertices Mean Error (NVME)
 
-LVME is ~~. 
+We compute vertices error between the reference and predicted 3D face mesh. The difference between the 3D mesh from the reference is represented by its color. The bluer the color of the 3D mesh, the smaller the difference, and the red the mesh, the larger the difference. Avatron shows a smaller overall error than FaceFormer. We colorize 3D mesh using an average error of three vertices which consist of each face. 
 
-#### Avatron vs. Avatron-FC
+### Avatron vs. Faceformer
 
-| <video controls style="width: 1200px" loop=True ><source src='./assets/lvme_01/sample_01.mp4' type='video/mp4'></video> |
+| <video controls style="width: 1200px"   ><source src='./assets/nvme/01.mp4' type='video/mp4'></video> |
 | :----------------------------------------------------------: |
-|                                                              |
-|                                                              |
+| <video controls style="width: 1200px"   ><source src='./assets/nvme/02.mp4' type='video/mp4'></video> |
+| <video controls style="width: 1200px"   ><source src='./assets/nvme/03.mp4' type='video/mp4'></video> |
 
+<pre>
+  
 
+</pre>
 
-#### Avatron vs. Faceformer
+## Similarity Mean Opinion Score (SMOS)
 
-video sample
+We provide three samples of FaceFormer and Avatron with reference. All samples from FaceFormer move around the mouth only, so they can convey linguistic information, but they do not describe a facial expression. In contrast, Avatron's samples provide not only context but also facial movements, making avatars more natural.
 
-|      |
-| ---- |
-|      |
-|      |
-
-
-
-## SMOS
-
-Description ~~. 
-
-#### Avatron vs Faceformer
+### Avatron vs Faceformer
 
 |                          Reference                           |                          Faceformer                          |                           Avatron                            |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/reference/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/faceformer/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/avatron/01.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/reference/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/faceformer/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/avatron/02.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/reference/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/faceformer/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/avatron/03.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/reference/04.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/faceformer/04.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/avatron/04.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/reference/05.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/faceformer/05.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/avatron/05.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/reference/06.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/faceformer/06.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_face/avatron/06.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px" ><source src='./assets/ava_face/reference/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/faceformer/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/avatron/01.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ava_face/reference/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/faceformer/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/avatron/02.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ava_face/reference/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/faceformer/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/avatron/03.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ava_face/reference/04.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/faceformer/04.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/avatron/04.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ava_face/reference/05.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/faceformer/05.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_face/avatron/05.mp4' type='video/mp4'></video> |
 
----------
-
-
-
-#### Avatron vs Avatron-noGAN
-
-|                          Reference                           |                        Avatron-noGAN                         |                           Avatron                            |
-| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/reference/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/avatron_nogan/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/avatron/01.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/reference/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/avatron_nogan/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/avatron/02.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/reference/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/avatron_nogan/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ava_nogan/avatron/03.mp4' type='video/mp4'></video> |
+<pre>
 
 
 
-#### Speed Control
+</pre>
+
+## Ablation study: Advantage of TTS
+
+We generate speech samples with modified speaking speeds and their corresponding 3D facial animations. We are able to control the tempo of the sample (slowing or speeding up) by controlling the estimated phoneme duration from the predictor in Avatron. FaceFormer cannot control the avatar tempo because it used the fixed-length speech as input.
 
 |                            Normal                            |                             Fast                             |                             Slow                             |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/normal/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/fast/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/slow/01.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/normal/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/fast/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/slow/02.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/normal/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/fast/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/slow/03.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/normal/04.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/fast/04.mp4' type='video/mp4'></video> | <video controls style="width: 400px" loop=True ><source src='./assets/ablation_speed/slow/04.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ablation_speed/normal/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ablation_speed/fast/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ablation_speed/slow/01.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ablation_speed/normal/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ablation_speed/fast/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ablation_speed/slow/02.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ablation_speed/normal/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ablation_speed/fast/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ablation_speed/slow/03.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ablation_speed/normal/04.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ablation_speed/fast/04.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ablation_speed/slow/04.mp4' type='video/mp4'></video> |
 
+<pre>
+  
+
+</pre>
+
+
+
+## Ablation study: Effect of GAN-based training crietrion
+
+The GAN-based training method helps the model generate facial movements that are more similar to the reference in terms of facial expressions.
+
+|                          Reference                           |                       Avatron w/o GAN                        |                           Avatron                            |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <video controls style="width: 400px"   ><source src='./assets/ava_nogan/reference/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_nogan/avatron_nogan/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_nogan/avatron/01.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/ava_nogan/reference/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_nogan/avatron_nogan/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/ava_nogan/avatron/02.mp4' type='video/mp4'></video> |
+
+<pre>
+
+  

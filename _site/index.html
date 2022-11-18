@@ -7,24 +7,24 @@
 
   <title>
     
-       &middot; AVATRON
+       &middot; Avatron
     
   </title>
 
   <link rel="stylesheet" href="/styles.css">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
   <link rel="shortcut icon" href="/assets/favicon.ico">
-  <link rel="alternate" type="application/atom+xml" title="AVATRON" href="/atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Avatron" href="/atom.xml">
 
   <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="AVATRON" />
+<meta property="og:title" content="Avatron" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="AVATRON" />
+<meta property="og:site_name" content="Avatron" />
 <script type="application/ld+json">
-{"@type":"WebSite","name":"AVATRON","headline":"AVATRON","url":"http://localhost:4000/","@context":"https://schema.org"}</script>
+{"@type":"WebSite","name":"Avatron","headline":"Avatron","url":"http://localhost:4000/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -35,8 +35,8 @@
     <div class="container content">
       <header class="masthead">
         <h3 class="masthead-title">
-          <a href="/" title="Home">AVATRON</a>
-          <small>3D Face Avatar and Voice Generation from Text</small>
+          <a href="/" title="Home">Avatron</a>
+          <small></small>
         </h3>
       </header>
 
@@ -55,53 +55,38 @@
 
 <hr />
 
-<h2 id="lvme">LVME</h2>
+<h2 id="normalized-vertices-mean-error-nvme">Normalized Vertices Mean Error (NVME)</h2>
 
-<p>LVME is ~~.</p>
+<p>We compute vertices error between the reference and predicted 3D face mesh. The difference between the 3D mesh from the reference is represented by its color. The bluer the color of the 3D mesh, the smaller the difference, and the red the mesh, the larger the difference. Avatron shows a smaller overall error than FaceFormer. We colorize 3D mesh using an average error of three vertices which consist of each face.</p>
 
-<h4 id="avatron-vs-avatron-fc">Avatron vs. Avatron-FC</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><video controls="" style="width: 1200px" loop="True"><source src="./assets/lvme_01/sample_01.mp4" type="video/mp4" /></video></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: center"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="avatron-vs-faceformer">Avatron vs. Faceformer</h4>
-
-<p>video sample</p>
+<h3 id="avatron-vs-faceformer">Avatron vs. Faceformer</h3>
 
 <table>
   <thead>
     <tr>
-      <th> </th>
+      <th style="text-align: center"><video controls="" style="width: 1200px"><source src="./assets/nvme/01.mp4" type="video/mp4" /></video></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td> </td>
+      <td style="text-align: center"><video controls="" style="width: 1200px"><source src="./assets/nvme/02.mp4" type="video/mp4" /></video></td>
     </tr>
     <tr>
-      <td> </td>
+      <td style="text-align: center"><video controls="" style="width: 1200px"><source src="./assets/nvme/03.mp4" type="video/mp4" /></video></td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="smos">SMOS</h2>
+<pre>
+  
 
-<p>Description ~~.</p>
+</pre>
 
-<h4 id="avatron-vs-faceformer-1">Avatron vs Faceformer</h4>
+<h2 id="similarity-mean-opinion-score-smos">Similarity Mean Opinion Score (SMOS)</h2>
+
+<p>We provide three samples of FaceFormer and Avatron with reference. All samples from FaceFormer move around the mouth only, so they can convey linguistic information, but they do not describe a facial expression. In contrast, Avatron’s samples provide not only context but also facial movements, making avatars more natural.</p>
+
+<h3 id="avatron-vs-faceformer-1">Avatron vs Faceformer</h3>
 
 <table>
   <thead>
@@ -113,70 +98,42 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/reference/01.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/faceformer/01.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/avatron/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/reference/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/faceformer/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/avatron/01.mp4" type="video/mp4" /></video></td>
     </tr>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/reference/02.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/faceformer/02.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/avatron/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/reference/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/faceformer/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/avatron/02.mp4" type="video/mp4" /></video></td>
     </tr>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/reference/03.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/faceformer/03.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/avatron/03.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/reference/03.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/faceformer/03.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/avatron/03.mp4" type="video/mp4" /></video></td>
     </tr>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/reference/04.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/faceformer/04.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/avatron/04.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/reference/04.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/faceformer/04.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/avatron/04.mp4" type="video/mp4" /></video></td>
     </tr>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/reference/05.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/faceformer/05.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/avatron/05.mp4" type="video/mp4" /></video></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/reference/06.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/faceformer/06.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_face/avatron/06.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/reference/05.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/faceformer/05.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_face/avatron/05.mp4" type="video/mp4" /></video></td>
     </tr>
   </tbody>
 </table>
 
-<hr />
+<pre>
 
-<h4 id="avatron-vs-avatron-nogan">Avatron vs Avatron-noGAN</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Reference</th>
-      <th style="text-align: center">Avatron-noGAN</th>
-      <th style="text-align: center">Avatron</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/reference/01.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/avatron_nogan/01.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/avatron/01.mp4" type="video/mp4" /></video></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/reference/02.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/avatron_nogan/02.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/avatron/02.mp4" type="video/mp4" /></video></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/reference/03.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/avatron_nogan/03.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ava_nogan/avatron/03.mp4" type="video/mp4" /></video></td>
-    </tr>
-  </tbody>
-</table>
 
-<h4 id="speed-control">Speed Control</h4>
+</pre>
+
+<h2 id="ablation-study-advantage-of-tts">Ablation study: Advantage of TTS</h2>
+
+<p>We generate speech samples with modified speaking speeds and their corresponding 3D facial animations. We are able to control the tempo of the sample (slowing or speeding up) by controlling the estimated phoneme duration from the predictor in Avatron. FaceFormer cannot control the avatar tempo because it used the fixed-length speech as input.</p>
 
 <table>
   <thead>
@@ -188,34 +145,69 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/normal/01.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/fast/01.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/slow/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/normal/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/fast/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/slow/01.mp4" type="video/mp4" /></video></td>
     </tr>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/normal/02.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/fast/02.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/slow/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/normal/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/fast/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/slow/02.mp4" type="video/mp4" /></video></td>
     </tr>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/normal/03.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/fast/03.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/slow/03.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/normal/03.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/fast/03.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/slow/03.mp4" type="video/mp4" /></video></td>
     </tr>
     <tr>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/normal/04.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/fast/04.mp4" type="video/mp4" /></video></td>
-      <td style="text-align: center"><video controls="" style="width: 400px" loop="True"><source src="./assets/ablation_speed/slow/04.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/normal/04.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/fast/04.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ablation_speed/slow/04.mp4" type="video/mp4" /></video></td>
     </tr>
   </tbody>
 </table>
 
+<pre>
+  
+
+</pre>
+
+<h2 id="ablation-study-effect-of-gan-based-training-crietrion">Ablation study: Effect of GAN-based training crietrion</h2>
+
+<p>The GAN-based training method helps the model generate facial movements that are more similar to the reference in terms of facial expressions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Reference</th>
+      <th style="text-align: center">Avatron w/o GAN</th>
+      <th style="text-align: center">Avatron</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_nogan/reference/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_nogan/avatron_nogan/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_nogan/avatron/01.mp4" type="video/mp4" /></video></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_nogan/reference/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_nogan/avatron_nogan/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/ava_nogan/avatron/02.mp4" type="video/mp4" /></video></td>
+    </tr>
+  </tbody>
+</table>
+
+<pre>
+
+  
+</pre>
 
       </main>
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2022-11-17T20:04:09+09:00">2022</time>. All rights reserved.
+          &copy; <time datetime="2022-11-18T15:19:27+09:00">2022</time>. All rights reserved.
         </small>
       </footer>
     </div>
