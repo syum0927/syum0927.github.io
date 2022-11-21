@@ -64,6 +64,23 @@ We provide three samples of FaceFormer and Avatron with reference. All samples f
 
 </pre>
 
+## Mean Opinion Score (MOS)
+
+We provide two samples of FaceFormer and Avatron with reference. Unlike SMOS samples, MOS samples are generated from duration predictor of TTS. Because of one-to-many mapping problem, reference and others have different durations. Avatron's performance does not lag behind even though it contains only 48.5% of the parameters compared to FaceFormer. 
+
+|                          Reference                           |                          Faceformer                          |                           Avatron                            |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/01.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/02.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/03.mp4' type='video/mp4'></video> |
+
+<pre>
+  
+
+</pre>
+
+
+
 ## Ablation study: Advantage of TTS
 
 We generate speech samples with modified speaking speeds and their corresponding 3D facial animations. We are able to control the tempo of the sample (slowing or speeding up) by controlling the estimated phoneme duration from the predictor in Avatron. FaceFormer cannot control the avatar tempo because it used the fixed-length speech as input.
@@ -94,18 +111,5 @@ The GAN-based training method helps the model generate facial movements that are
 <pre>
 
 </pre>
-
-
-
-## Mean Opinion Score (MOS)
-
-We provide two samples of FaceFormer and Avatron with reference. Unlike SMOS samples, MOS samples are generated from duration predictor of TTS. Because of one-to-many mapping problem, reference and others have different durations. Avatron's performance does not lag behind even though it contains only 48.5% of the parameters compared to FaceFormer. 
-
-|                          Reference                           |                          Faceformer                          |                           Avatron                            |
-| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/01.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/02.mp4' type='video/mp4'></video> |
-| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/03.mp4' type='video/mp4'></video> |
-
 
 

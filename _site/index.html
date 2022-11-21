@@ -136,6 +136,42 @@
 
 </pre>
 
+<h2 id="mean-opinion-score-mos">Mean Opinion Score (MOS)</h2>
+
+<p>We provide two samples of FaceFormer and Avatron with reference. Unlike SMOS samples, MOS samples are generated from duration predictor of TTS. Because of one-to-many mapping problem, reference and others have different durations. Avatron’s performance does not lag behind even though it contains only 48.5% of the parameters compared to FaceFormer.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Reference</th>
+      <th style="text-align: center">Faceformer</th>
+      <th style="text-align: center">Avatron</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ref_select/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ff_select/01.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ava_select/01.mp4" type="video/mp4" /></video></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ref_select/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ff_select/02.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ava_select/02.mp4" type="video/mp4" /></video></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ref_select/03.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ff_select/03.mp4" type="video/mp4" /></video></td>
+      <td style="text-align: center"><video controls="" style="width: 400px"><source src="./assets/mos/ava_select/03.mp4" type="video/mp4" /></video></td>
+    </tr>
+  </tbody>
+</table>
+
+<pre>
+  
+
+</pre>
+
 <h2 id="ablation-study-advantage-of-tts">Ablation study: Advantage of TTS</h2>
 
 <p>We generate speech samples with modified speaking speeds and their corresponding 3D facial animations. We are able to control the tempo of the sample (slowing or speeding up) by controlling the estimated phoneme duration from the predictor in Avatron. FaceFormer cannot control the avatar tempo because it used the fixed-length speech as input.</p>
@@ -207,7 +243,7 @@
 
 </pre>
 
-<h2 id="mean-opinion-score-mos">Mean Opinion Score (MOS)</h2>
+<h2 id="mean-opinion-score-mos-1">Mean Opinion Score (MOS)</h2>
 
 <p>We provide two samples of FaceFormer and Avatron with reference. Unlike SMOS samples, MOS samples are generated from duration predictor of TTS. Because of one-to-many mapping problem, reference and others have different durations. Avatron’s performance does not lag behind even though it contains only 48.5% of the parameters compared to FaceFormer.</p>
 
@@ -243,7 +279,7 @@
 
       <footer class="footer">
         <small>
-          &copy; <time datetime="2022-11-21T14:51:23+09:00">2022</time>. All rights reserved.
+          &copy; <time datetime="2022-11-21T21:19:01+09:00">2022</time>. All rights reserved.
         </small>
       </footer>
     </div>
