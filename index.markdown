@@ -15,6 +15,8 @@ layout: default
 
 
 
+<video controls style="width: 1200px"   ><source src='./assets/demo_intro.mp4' type='video/mp4'></video>
+
 ## Abstract
 
 We propose a novel 3D facial animation model that does not require explicit temporal synchronization between talking faces and speech. Our model presents a solution to a chronic problem that exists in current speech-driven 3D facial animation. Due to time domain differences between videos and speech, most approaches apply downsampling or upsampling to linguistic features from a pre-trained automatic speech recognition (ASR) model, resulting in unnatural facial movements. However, we efficiently utilize intermediate features from a text-to-speech (TTS) model to solve this problem. We upsample the text embedding of a non-autoregressive TTS model to the length of a mel-spectrogram and feed it into an avatar model to be converted to the vertices of a 3D face avatar. Since our proposed model does not require an ASR model, we are able to reduce the number of parameters and computational complexity of the whole solution. GAN-based training is also used to obtain vivid human-like facial movements. Our model demonstrates good effectiveness and performance in terms of normalized vertices mean error, as well as two subjective evaluations, SMOS and MOS.
@@ -31,10 +33,11 @@ We compute vertices error between the reference and predicted 3D face mesh. The 
 
 ### Avatron vs. Faceformer
 
-| <video controls style="width: 1200px"   ><source src='./assets/nvme/01.mp4' type='video/mp4'></video> |
+| <video controls style="width: 1200px"><source src='./assets/nvme/01.mp4' type='video/mp4'></video> |
 | :----------------------------------------------------------: |
-| <video controls style="width: 1200px"   ><source src='./assets/nvme/02.mp4' type='video/mp4'></video> |
-| <video controls style="width: 1200px"   ><source src='./assets/nvme/03.mp4' type='video/mp4'></video> |
+| <video controls style="width: 1200px"><source src='./assets/nvme/02.mp4' type='video/mp4'></video> |
+| <video controls style="width: 1200px"><source src='./assets/nvme/03.mp4' type='video/mp4'></video> |
+| <video controls style="width: 1200px"><source src='./assets/nvme/04.mp4' type='video/mp4'></video> |
 
 <pre>
   
@@ -90,4 +93,19 @@ The GAN-based training method helps the model generate facial movements that are
 
 <pre>
 
-  
+</pre>
+
+
+
+## Mean Opinion Score (MOS)
+
+We provide two samples of FaceFormer and Avatron with reference. Unlike SMOS samples, MOS samples are generated from duration predictor of TTS. Because of one-to-many mapping problem, reference and others have different durations. Avatron's performance does not lag behind even though it contains only 48.5% of the parameters compared to FaceFormer. 
+
+|                          Reference                           |                          Faceformer                          |                           Avatron                            |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/01.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/01.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/02.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/02.mp4' type='video/mp4'></video> |
+| <video controls style="width: 400px"   ><source src='./assets/mos/ref_select/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ff_select/03.mp4' type='video/mp4'></video> | <video controls style="width: 400px"   ><source src='./assets/mos/ava_select/03.mp4' type='video/mp4'></video> |
+
+
+
