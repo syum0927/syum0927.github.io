@@ -20,6 +20,7 @@ layout: default
 ## Abstract
 
 We propose a 3D facial animation model that does not require explicit temporal synchronization between talking faces and speech. Due to time domain differences between videos and speech, most approaches apply resampling to linguistic features from a pre-trained automatic speech recognition (ASR) model, which requires high computational cost. To solve this problem, we efficiently utilize intermediate features extracted from a non-autoregressive text-to-speech (TTS) model. Specifically, we first upsample the text embedding to match with the length of the corresponding mel-spectrogram, then feed the embedding into an avatar model to convert it into the vertices of a 3D face avatar. Since our proposed model does not require an ASR model, we are able to reduce the number of parameters and computational complexity. We also use a GAN-based training to obtain vivid human-like facial movements. Our model demonstrate high performance in terms of normalized vertices mean error and two subjective evaluation tasks.
+
 -----------
 
 ------------
